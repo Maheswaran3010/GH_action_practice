@@ -1,6 +1,6 @@
-name: deploment
+name: deployment
 on: push
-joobs:
+jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
