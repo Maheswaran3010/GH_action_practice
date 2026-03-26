@@ -4,6 +4,12 @@ on:
     types: 
        - opened #types --> activity types that trigger the workflow
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop-* # develop_1 or develop_2, etc. will trigger the workflow
+    paths-ignore:
+      - ".github/workflows/*" #ignore changes to the workflow file itself
 jobs:
   deploy:
     runs-on: ubuntu-latest
