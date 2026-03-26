@@ -2,7 +2,10 @@ name: Events Demo 1
 on: 
   pull_request:
     types: 
-       - opened #types --> activity types that trigger the workflow
+      - opened #types --> activity types that trigger the workflow
+    branches:
+      - main
+      - develop-* # develop_1 or develop_2, etc. will trigger the workflow 
   workflow_dispatch:
   push:
     branches:
